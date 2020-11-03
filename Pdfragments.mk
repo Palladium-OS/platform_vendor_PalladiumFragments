@@ -16,3 +16,9 @@ LOCAL_PATH := vendor/PalladiumFragments
 
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
+
+PRODUCT_PACKAGES += \
+    TurboPrebuilt 
+
+PRODUCT_COPY_FILES += \
+    vendor/PalladiumFragments/etc/privapp-permissions-googleapps.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-googleapps.xml 
