@@ -45,3 +45,25 @@ $(foreach f, $(font_src_files), $(call build-one-font-module, $(f)))
 build-one-font-module :=
 font_src_files :=
 
+include $(CLEAR_VARS)
+
+define build-one-font-module
+$(eval include $(CLEAR_VARS))\
+$(eval LOCAL_MODULE := $(1))\
+$(eval LOCAL_SRC_FILES := $(1))\
+$(eval LOCAL_MODULE_CLASS := ETC)\
+$(eval LOCAL_MODULE_TAGS := optional)\
+$(eval LOCAL_PRODUCT_MODULE := true)\
+$(eval LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/fonts)\
+$(eval include $(BUILD_PREBUILT))
+endef
+
+font_src_files := \
+    SlateForOnePlus-Bold.ttf \
+    SlateForOnePlus-Medium.ttf \
+    SlateForOnePlus-Regular.ttf
+
+$(foreach f, $(font_src_files), $(call build-one-font-module, $(f)))
+
+build-one-font-module :=
+font_src_files :=

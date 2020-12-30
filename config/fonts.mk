@@ -52,11 +52,11 @@ PRODUCT_PACKAGES += \
     ZillaSlab-SemiBoldItalic.ttf \
     ZillaSlab-SemiBold.ttf
 
-# Customization overlays
+# oneplus-slate family
 PRODUCT_PACKAGES += \
-    FontArbutusSourceOverlay \
-    FontArvoLatoOverlay \
-    FontRubikRubikOverlay
+    SlateForOnePlus-Bold.ttf \
+    SlateForOnePlus-Medium.ttf \
+    SlateForOnePlus-Regular.ttf
 
 PRODUCT_COPY_FILES += \
     vendor/PalladiumFragments/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
