@@ -23,3 +23,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/PalladiumFragments/etc/privapp-permissions-googleapps.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-googleapps.xml \
     vendor/PalladiumFragments/etc/googlesysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/elgoog.xml
+
+# Inherit from fonts config
+$(call inherit-product, vendor/PalladiumFragments/config/fonts.mk)
