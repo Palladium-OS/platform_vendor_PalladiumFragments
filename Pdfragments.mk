@@ -17,6 +17,8 @@ LOCAL_PATH := vendor/PalladiumFragments
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/PalladiumFragments/overlay
+
 PRODUCT_PACKAGES += \
     TurboPrebuilt 
 
